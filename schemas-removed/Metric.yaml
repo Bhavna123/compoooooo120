@@ -1,0 +1,68 @@
+type: object
+x-stoplight:
+  id: mzuz8m6qmzdy4
+description: |-
+  Traffic metrics for a specific API proxy.
+
+  The fields are defined as read-only because the data originates from the SEAPIM platform.
+required:
+  - proxyName
+  - totalCalls0_30Days
+  - totalCalls30_60Days
+  - createdAt
+  - updatedAt
+  - proxy
+properties:
+  proxyName:
+    type: string
+    x-stoplight:
+      id: 7fysaaf30jxx4
+    example: API-Design-Review-V1
+    description: Name of the proxy that generated these metrics
+    readOnly: true
+  totalCalls0_30Days:
+    type: integer
+    x-stoplight:
+      id: 2cllzu3f6lkoo
+    description: Total API calls in the last 30 days
+    readOnly: true
+  totalCalls30_60Days:
+    type: integer
+    x-stoplight:
+      id: e9tvcv1ch7kqb
+    description: 'Total API calls in the last 30-60 days, , calculated as totalCalls30_60Days/30'
+    readOnly: true
+  averageCalls0_30Days:
+    type: integer
+    x-stoplight:
+      id: 9z6d1d6m1oq0z
+    description: 'Average API calls in the last 30 days, calculated as totalCalls0_30Days/30'
+    readOnly: true
+  averageCalls30_60Days:
+    type: integer
+    x-stoplight:
+      id: xyym3woy4r70s
+    description: Average API calls in the last 30-60 days
+    readOnly: true
+  averageCallTrend:
+    type: integer
+    x-stoplight:
+      id: yyldjqkmt8f9v
+    description: 'Difference between the averageCalls0_30Days and averageCalls30_60Days, which indicates a positive or negative trend'
+    readOnly: true
+  createdAt:
+    $ref: ../models/CreatedAt.yaml
+    description: The time this record was created
+    x-stoplight:
+      id: 73ho5ag70ujv2
+  updatedAt:
+    $ref: ../models/UpdatedAt.yaml
+    description: The time this record was last updated
+    x-stoplight:
+      id: bsvz6clvghu8q
+  proxy:
+    $ref: ./Proxy.yaml
+    x-stoplight:
+      id: wgmdy7n2zkvhe
+    description: API proxy that generated these metrics
+title: Metric

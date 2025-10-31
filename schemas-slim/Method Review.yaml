@@ -1,0 +1,73 @@
+type: object
+x-stoplight:
+  id: swq5udy0tzcrm
+title: Method Review
+description: The results of reviewing a specific method for a path in an API design document.
+properties:
+  id:
+    $ref: ../models/Id.yaml
+    x-stoplight:
+      id: sqzd8ia1q3gg4
+  method:
+    description: The method being reviewed
+    enum:
+      - GET
+    x-stoplight:
+      id: i9rmuty566kmi
+  summary:
+    $ref: ../models/Check.yaml
+    description: The results of reviewing the summary
+    x-stoplight:
+      id: 7qp076gh75hhs
+  description:
+    $ref: ../models/Check.yaml
+    description: The results of reviewing the description
+    x-stoplight:
+      id: tdl1j2e1px3kp
+  headers:
+    $ref: ../models/Check.yaml
+    description: The results of reviewing the headers
+    x-stoplight:
+      id: y5xzgao8nqfbb
+  queryParameters:
+    $ref: ../models/Check.yaml
+    description: The results of reviewing the query parameters
+    x-stoplight:
+      id: 8s5f8snis489k
+  requestBody:
+    $ref: ../models/Check.yaml
+    description: The results of reviewing the request body
+    x-stoplight:
+      id: kkf5n73yhqlhp
+  successResponses:
+    $ref: ../models/Check.yaml
+    description: The results of reviewing all of the 2xx and 3xx responses
+    x-stoplight:
+      id: 8motiuggdixdt
+  errorResponses:
+    $ref: ../models/Check.yaml
+    description: The results of reviewing all of the 4xx and 5xx responses
+    x-stoplight:
+      id: f8n5cq3828l1g
+  methodUsed:
+    $ref: ../models/Check.yaml
+    description: Was the correct method used for the use case
+    x-stoplight:
+      id: nsfrhmycctgjz
+  parameters:
+    type: array
+    description: The reviews for parameters that are on this method
+    items:
+      $ref: ./Parameter Review.yaml
+      x-stoplight:
+        id: vsnmws5hb27ge
+    x-stoplight:
+      id: 7ccbugs4q7mm0
+  createdAt:
+    $ref: ../models/CreatedAt.yaml
+    x-stoplight:
+      id: h6ln3dyu4coh7
+  updatedAt:
+    $ref: ../models/UpdatedAt.yaml
+    x-stoplight:
+      id: bk7bz7vr26j0a

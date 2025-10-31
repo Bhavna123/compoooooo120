@@ -1,0 +1,45 @@
+type: object
+x-stoplight:
+  id: 1y6s47wrclufx
+description: Support request that asks for an API owner to be changed.
+title: Role Change Request
+required:
+  - id
+  - newApiOwner
+  - requestStatus
+  - createdAt
+  - updatedAt
+  - ticket
+properties:
+  id:
+    $ref: ../models/Id.yaml
+    x-stoplight:
+      id: 630z7yewhy6mx
+    description: Database identifier
+  newApiOwner:
+    type: string
+    x-stoplight:
+      id: wn37xskqp3esf
+    format: email
+    description: Email for the new API owner
+    example: user@se.com
+  requestStatus:
+    $ref: ./Role Change Request Request Status.yaml
+    x-stoplight:
+      id: 5hvz34x4s7p9h
+    description: Request status
+  createdAt:
+    $ref: ../models/CreatedAt.yaml
+    description: The time this record was created
+    x-stoplight:
+      id: up14hnns4892s
+  updatedAt:
+    $ref: ../models/UpdatedAt.yaml
+    description: The time this record was last updated
+    x-stoplight:
+      id: qal0n0li57dny
+  ticket:
+    $ref: ./Ticket.yaml
+    x-stoplight:
+      id: 57djdzla6ljx7
+    description: 'Common ticketing attributes, shared by all requests'

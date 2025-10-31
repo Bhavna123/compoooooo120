@@ -1,0 +1,28 @@
+type: object
+x-stoplight:
+  id: qnt80x131ohdj
+title: Environment Domain
+description: This captures the list of CORS domains that need to be whitelisted for a given API proxy. Specifically thevalues that would go in the Access Control Allow Origin header.
+required:
+  - createdAt
+  - updatedAt
+properties:
+  domains:
+    type: array
+    x-stoplight:
+      id: 5bkeubcxpblb2
+    description: List of domains that are to be whitelisted
+    items:
+      x-stoplight:
+        id: rin6xjd1srzww
+      type: string
+  createdAt:
+    $ref: ../models/CreatedAt.yaml
+    description: The time this record was created
+    x-stoplight:
+      id: qw444wvz6anm9
+  updatedAt:
+    $ref: ../models/UpdatedAt.yaml
+    description: The time this record was last updated
+    x-stoplight:
+      id: 5w6p17xknb6zy

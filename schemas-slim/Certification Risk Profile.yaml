@@ -1,0 +1,10 @@
+type: string
+x-stoplight:
+  id: h7q48499p4vkp
+enum:
+  - high
+  - medium
+  - low
+example: medium
+description: 'Certification risk profile, as assessed by the cyber team: high, medium or low.'
+title: Certification Risk Profile

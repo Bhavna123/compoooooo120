@@ -1,0 +1,66 @@
+type: object
+x-stoplight:
+  id: cb2qepeurkl03
+description: A notification for the attention of the API community.
+required:
+  - id
+  - title
+  - createdAt
+  - updatedAt
+  - ReadNotification
+properties:
+  id:
+    $ref: ../models/Id.yaml
+    x-stoplight:
+      id: nn0le0rirs4ho
+    description: Database identifier
+  title:
+    type: string
+    x-stoplight:
+      id: gesdlrs756816
+    description: Short title for this notification
+    example: New Quote API major version is available
+  content:
+    type: string
+    x-stoplight:
+      id: ps7g03ukmtrw6
+    description: 'Notification content, composed by the API team'
+    example: Quote V4 includes operations to edit or cancel quote lines. The data model has been refactored.
+  postedOn:
+    type: string
+    format: date-time
+    x-stoplight:
+      id: rg2xgrplmvisx
+    example: '2025-08-11T05:49:57.000Z'
+    description: Date the notification is posted. It may be a future date.
+  editedBy:
+    type: string
+    x-stoplight:
+      id: ilauh33ryczw4
+    description: 'Person who last edited this notification, typically a member of the API team'
+    example: user@se.com
+  linkedTo:
+    type: string
+    x-stoplight:
+      id: mmsmr4yk7n6xt
+    format: uri
+    description: 'Path to an API portal page with details related to the API, proxy or version'
+    example: 'https://developer.api.se.com/catalog/quote'
+  createdAt:
+    $ref: ../models/CreatedAt.yaml
+    description: The time this record was created
+    x-stoplight:
+      id: t91nfrjzzmsjt
+  updatedAt:
+    $ref: ../models/UpdatedAt.yaml
+    description: The time this record was last updated
+    x-stoplight:
+      id: d0hgmf5w6j1yz
+  ReadNotification:
+    type: array
+    x-stoplight:
+      id: v32t0483h0fkb
+    items:
+      $ref: ./ReadNotification.yaml
+      x-stoplight:
+        id: r0bdjestbhri8

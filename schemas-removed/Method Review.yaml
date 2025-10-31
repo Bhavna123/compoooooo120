@@ -1,0 +1,73 @@
+type: object
+x-stoplight:
+  id: orb6qcui7cnox
+title: Method Review
+description: The results of reviewing a specific method for a path in an API design document.
+properties:
+  id:
+    $ref: ../models/Id.yaml
+    x-stoplight:
+      id: ljmp0nz4eqqq9
+  method:
+    description: The method being reviewed
+    enum:
+      - GET
+    x-stoplight:
+      id: jk8vyu0ip2q4f
+  summary:
+    $ref: ../models/Check.yaml
+    description: The results of reviewing the summary
+    x-stoplight:
+      id: 8p1fpwqgomul0
+  description:
+    $ref: ../models/Check.yaml
+    description: The results of reviewing the description
+    x-stoplight:
+      id: cwuumre6zq1w3
+  headers:
+    $ref: ../models/Check.yaml
+    description: The results of reviewing the headers
+    x-stoplight:
+      id: 2awdwlhg0ijkq
+  queryParameters:
+    $ref: ../models/Check.yaml
+    description: The results of reviewing the query parameters
+    x-stoplight:
+      id: 476sz93t45pbg
+  requestBody:
+    $ref: ../models/Check.yaml
+    description: The results of reviewing the request body
+    x-stoplight:
+      id: 19zdulox7ucg1
+  successResponses:
+    $ref: ../models/Check.yaml
+    description: The results of reviewing all of the 2xx and 3xx responses
+    x-stoplight:
+      id: rrz30lctl5g2t
+  errorResponses:
+    $ref: ../models/Check.yaml
+    description: The results of reviewing all of the 4xx and 5xx responses
+    x-stoplight:
+      id: 3qpkoafjgdmal
+  methodUsed:
+    $ref: ../models/Check.yaml
+    description: Was the correct method used for the use case
+    x-stoplight:
+      id: qvuhittue0z8s
+  parameters:
+    type: array
+    description: The reviews for parameters that are on this method
+    items:
+      $ref: ./Parameter Review.yaml
+      x-stoplight:
+        id: h6vk6w7w6gy7c
+    x-stoplight:
+      id: 0sonz5ng5nkv3
+  createdAt:
+    $ref: ../models/CreatedAt.yaml
+    x-stoplight:
+      id: u8dkzes1l6ba8
+  updatedAt:
+    $ref: ../models/UpdatedAt.yaml
+    x-stoplight:
+      id: nxo45k2jhl3c9

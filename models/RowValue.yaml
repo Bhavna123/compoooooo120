@@ -1,0 +1,19 @@
+title: RowValue
+x-stoplight:
+  id: erznmfkry4wap
+type: object
+description: Capture the answer and possibly the details to this question
+required:
+  - appliesToApi
+properties:
+  appliesToApi:
+    type: boolean
+    x-stoplight:
+      id: bdjt9582jle5o
+    description: Capturing yes or no if this applies to the API
+  details:
+    type: string
+    x-stoplight:
+      id: t1p1qbl3ns9nw
+    format: markdown
+    description: 'If this question requires more details, they are captured here.'

@@ -1,0 +1,7 @@
+title: Id
+x-stoplight:
+  id: jws6j9zy3y6j7
+type: integer
+example: 101
+readOnly: true
+description: Database identifier

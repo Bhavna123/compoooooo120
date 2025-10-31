@@ -1,0 +1,195 @@
+type: object
+x-stoplight:
+  id: ghxjlo5ac1njg
+title: Document Quality
+description: 'Quality metrics related to how well and specific API version is documented, making it easy for application developers to understand and use without any additional input.'
+properties:
+  id:
+    $ref: ../models/Id.yaml
+    description: Database identifier
+    x-stoplight:
+      id: ehewjadyvyo5u
+  completeness:
+    type: object
+    description: Metrics related to completeness. Solely based on "exist" or "missing"
+    properties:
+      noDefects:
+        type: integer
+        minimum: 0
+        maximum: 2
+        description: Defects exist in AViD
+        x-stoplight:
+          id: 4zxp56s98y16m
+      oas3:
+        type: integer
+        minimum: 0
+        maximum: 1
+        description: Document is OpenAPI V3
+        x-stoplight:
+          id: hvfadc5kykoil
+      contactProvided:
+        type: integer
+        minimum: 0
+        maximum: 1
+        description: Contact section identifies a contact person
+        x-stoplight:
+          id: r9ooz36xbkmdm
+      payloadExamples:
+        type: integer
+        minimum: 0
+        maximum: 2
+        description: Examples exist for requests and responses
+        x-stoplight:
+          id: sb2eyarkxqqxb
+      errorCodesDocumented:
+        type: integer
+        minimum: 0
+        maximum: 2
+        description: All APIM response codes are documented.
+        x-stoplight:
+          id: 9bcuj4ry41xjp
+      descriptionsProvided:
+        type: integer
+        minimum: 0
+        maximum: 2
+        description: 'API, Operations, Models and Fields are all described'
+        x-stoplight:
+          id: eyeet2zdxcqyo
+      errorsReferenceCommonLibrary:
+        type: integer
+        minimum: 0
+        maximum: 2
+        description: Errors reference the standardized SEAPIM Common Error Response Library
+        x-stoplight:
+          id: 95ts38dm5fvn4
+    x-stoplight:
+      id: y1i5z4zm1q4ep
+  compliance:
+    type: object
+    description: Quality metrics related to "correctness" or "accuracy"
+    properties:
+      standardAuthentication:
+        type: integer
+        minimum: 0
+        maximum: 1
+        description: API Uses a standard API Authentication pattern.
+        x-stoplight:
+          id: 9wsyfn5st872v
+      followsNamingConvention:
+        type: integer
+        description: Naming conventions for various aspects
+        x-stoplight:
+          id: 4nd67fr4ea0bs
+      verbsUsedCorrectly:
+        type: integer
+        minimum: 0
+        maximum: 1
+        description: HTTP Verbs are used as intended
+        x-stoplight:
+          id: 5k8fefpc5jqv4
+      responseCodesUsedCorrectly:
+        type: integer
+        minimum: 0
+        description: 2xx/4xx/5xx are used correctly
+        maximum: 2
+        x-stoplight:
+          id: zsv63ap6ji9w0
+      headersUsedCorrectly:
+        type: integer
+        minimum: 0
+        maximum: 1
+        description: Are the headers documented used as intended
+        x-stoplight:
+          id: 5cimywo5dwdcx
+      queryParametersUsedCorrectly:
+        type: integer
+        minimum: 0
+        maximum: 1
+        description: Are query parameters used properly
+        x-stoplight:
+          id: 7356aczek3e1l
+      contactIsApiOwner:
+        type: integer
+        minimum: 0
+        maximum: 1
+        description: Is the Contact section in a spec the API Owner?
+        x-stoplight:
+          id: 3dbqfcmg25s77
+      onlyJsonPayloads:
+        type: integer
+        minimum: 0
+        maximum: 1
+        description: Does the API only use JSON in it's payload?
+        x-stoplight:
+          id: dnyzc6sflxsm4
+    x-stoplight:
+      id: fxcrch54zlizo
+  generalization:
+    type: object
+    description: Reusability and generaliztion metrics
+    properties:
+      technologyNeutralNames:
+        type: integer
+        minimum: 0
+        maximum: 1
+        description: Names do not indicate underlying technology or consumer
+        x-stoplight:
+          id: sa07otygjariw
+      technologyNeutralDescriptions:
+        type: integer
+        minimum: 0
+        maximum: 1
+        description: Descriptions do not indicate underlying technology or consumer
+        x-stoplight:
+          id: 32bv8ryw4n3bt
+      buisnessOriented:
+        type: integer
+        minimum: 0
+        maximum: 1
+        description: Decoupled from data layer
+        x-stoplight:
+          id: mkpcp7goho6bh
+    x-stoplight:
+      id: rq8elzto3719c
+  usability:
+    type: object
+    description: How easy is the API to onboard new consumers
+    properties:
+      buisnessFriendly:
+        type: integer
+        description: API Description clearly indicates the purpose and functionality of the API
+        minimum: 0
+        maximum: 1
+        x-stoplight:
+          id: udfw8u0xhpaqp
+      developerFriendly:
+        type: integer
+        description: API is easy for deveopers to implement
+        minimum: 0
+        maximum: 1
+        x-stoplight:
+          id: lxy4284n8blqv
+      resourceOriented:
+        type: integer
+        minimum: 0
+        maximum: 1
+        description: Endpoints/payloads are simple to understand and consistent across the API
+        x-stoplight:
+          id: y34ezujq2u6ng
+      payloadExamples:
+        type: integer
+        minimum: 0
+        maximum: 1
+        description: Payload examples in requests are useable. Copy/Paste from document into a request shoud result in no errors.
+        x-stoplight:
+          id: ymr5fg3bjsnh6
+    x-stoplight:
+      id: 15h0xqqjte3io
+  createdAt:
+    $ref: ../models/CreatedAt.yaml
+    x-stoplight:
+      id: 7km30fmdso29h
+  updatedAt:
+    $ref: ../models/UpdatedAt.yaml
+    x-stoplight:
+      id: 87oiq21xfw7ry

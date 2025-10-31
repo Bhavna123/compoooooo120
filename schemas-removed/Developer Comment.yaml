@@ -1,0 +1,38 @@
+type: object
+x-stoplight:
+  id: iqlqshujkqcf2
+title: Developer Comment
+description: A comment left by a developer which gives any insight to custom implementation details which this developer did that they think would be helpful for future developers to know about.
+required:
+  - id
+  - createdAt
+  - updatedAt
+  - Requirement
+properties:
+  id:
+    $ref: ../models/Id.yaml
+    description: Database identifier
+    x-stoplight:
+      id: 4h3owfzjf1kj7
+  comment:
+    type: string
+    x-stoplight:
+      id: umq2g28s17921
+  editedBy:
+    type: string
+    x-stoplight:
+      id: wldy0t1yay4n7
+  createdAt:
+    $ref: ../models/CreatedAt.yaml
+    description: The time this record was created
+    x-stoplight:
+      id: f5wgfzmpu9fxa
+  updatedAt:
+    $ref: ../models/UpdatedAt.yaml
+    description: The time this record was last updated
+    x-stoplight:
+      id: vb271gf6efblp
+  Requirement:
+    $ref: ./Requirement.yaml
+    x-stoplight:
+      id: v9ldpk397fjvm

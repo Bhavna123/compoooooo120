@@ -1,0 +1,73 @@
+type: object
+x-stoplight:
+  id: gnfqusg8p2a5s
+title: Method Review
+description: The results of reviewing a specific method for a path in an API design document.
+properties:
+  id:
+    $ref: ../models/Id.yaml
+    x-stoplight:
+      id: 0j8m6gvemc5u4
+  method:
+    description: The method being reviewed
+    enum:
+      - GET
+    x-stoplight:
+      id: kias5ert9cl3f
+  summary:
+    $ref: ../models/Check.yaml
+    description: The results of reviewing the summary
+    x-stoplight:
+      id: mx3vfdkh7qsmp
+  description:
+    $ref: ../models/Check.yaml
+    description: The results of reviewing the description
+    x-stoplight:
+      id: e8ph91d7d8udd
+  headers:
+    $ref: ../models/Check.yaml
+    description: The results of reviewing the headers
+    x-stoplight:
+      id: vd0ld6wsvj0p4
+  queryParameters:
+    $ref: ../models/Check.yaml
+    description: The results of reviewing the query parameters
+    x-stoplight:
+      id: hcm1fc69vzy8q
+  requestBody:
+    $ref: ../models/Check.yaml
+    description: The results of reviewing the request body
+    x-stoplight:
+      id: 1888amr4czn7m
+  successResponses:
+    $ref: ../models/Check.yaml
+    description: The results of reviewing all of the 2xx and 3xx responses
+    x-stoplight:
+      id: jbaockffu5j6k
+  errorResponses:
+    $ref: ../models/Check.yaml
+    description: The results of reviewing all of the 4xx and 5xx responses
+    x-stoplight:
+      id: 5fr9wizlb277y
+  methodUsed:
+    $ref: ../models/Check.yaml
+    description: Was the correct method used for the use case
+    x-stoplight:
+      id: yijtqg4oy8m1r
+  parameters:
+    type: array
+    description: The reviews for parameters that are on this method
+    items:
+      $ref: ./ParameterReview.yaml
+      x-stoplight:
+        id: 8i1n1r9xnr6wi
+    x-stoplight:
+      id: d0c0yoq6dm0or
+  createdAt:
+    $ref: ../models/CreatedAt.yaml
+    x-stoplight:
+      id: sph05n4j55ph1
+  updatedAt:
+    $ref: ../models/UpdatedAt.yaml
+    x-stoplight:
+      id: 5az89kvxn9van
